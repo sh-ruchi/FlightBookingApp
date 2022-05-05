@@ -1,0 +1,24 @@
+.f-class{
+	background-color: #Ecf3f9;
+	drop-shadow(2px 3px 3px rgba(0, 0, 0, 0.4));
+    border-radius: 3%;
+    border-top-left-radius: 4%;
+    border-top-right-radius: 24%;
+    border-bottom-left-radius: 4%;
+    border-bottom-right-radius: 25%;
+    text-decoration-color: blue;
+}
+body{
+	background-image: url('images/sky.jfif');
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align:center; 
+}
+h1{
+	padding:3%;
+}
+.content{
+	    font-size: 1.5rem;
+  		font-weight: bold;
+  		
+}

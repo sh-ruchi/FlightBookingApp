@@ -3,14 +3,17 @@
  */
 package com.ruchika.flightreservation.pojo;
 
-import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.JoinTable;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
+
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 
 /**
  * @author Ruchika Sharma
@@ -21,9 +24,26 @@ import javax.persistence.Table;
 @Table(name = "user" )
 public class User extends GenericEntity {
 	
+	
+	@Column(name = "FIRST_NAME")
+	@NotBlank
+	@Size(min = 3, max = 60)
 	private String firstName;
+	
+	@Column(name = "LAST_NAME")
+	@NotBlank
+	@Size(min = 3, max = 60)
 	private String lastName;
+	
+	@Column(name = "EMAIL")
+	@NotBlank
+	@NotNull
+	@Email
 	private String email;
+	
+	@Column(name = "PASSWORD")
+	@NotBlank
+	@Size(min = 8, max = 15)
 	private String password;
 	
 		
@@ -55,4 +75,9 @@ public class User extends GenericEntity {
 	}
 	
 
+	@Override
+	public String toString() {
+		return " [firstName=" + firstName + ", lastName=" + lastName + ", email="+ email +",password="+password+"]";	
+	
+	}
 }

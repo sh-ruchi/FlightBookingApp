@@ -3,6 +3,7 @@
  */
 package com.ruchika.flightreservation.pojo;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 
 /**
@@ -13,11 +14,19 @@ import javax.persistence.Entity;
 @Entity
 public class Passenger extends GenericEntity {
 
-	
+	@Column(name="FIRST_NAME")
 	private String firstName;
+	
+	@Column(name="LAST_NAME")
 	private String lastName;
+	
+	@Column(name="MIDDLE_NAME")
 	private String middleName;
+	
+	@Column(name="EMAIL")
 	private String email;
+	
+	@Column(name="PHONE")
 	private String phone;
 	
 	public String getFirstName() {

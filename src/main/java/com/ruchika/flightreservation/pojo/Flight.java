@@ -6,9 +6,12 @@ package com.ruchika.flightreservation.pojo;
 import java.sql.Timestamp;
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.NotBlank;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -18,20 +21,33 @@ import org.springframework.format.annotation.DateTimeFormat;
  */
 
 @Entity
+@Table(name ="Flight")
 public class Flight extends GenericEntity{
 	
- 
+
+  @Column(name="FLIGHT_NUMBER")
   private String flightNumber;
+  
+  @Column(name="OPERATING_AIRLINES")
   private String operatingAirlines;
+  
+  @Column(name="DEPARTURE_CITY")
   private String departureCity;
  
-private String arrivalCity;
+  @Column(name="ARRIVAL_CITY")
+  private String arrivalCity;
   
-  @DateTimeFormat(pattern = "dd/MM/yyyy")
+  @Column(name="DATE_OF_DEPARTURE")
+  @DateTimeFormat(pattern = "MM/dd/yyyy")
   @Temporal(TemporalType.DATE)
   private Date dateOfDeparture;
+  
+  @Column(name="ESTIMATED_DEPARTURE_TIME")
   private Timestamp estimatedDepartureTime;
 
+public Flight() {
+	// TODO Auto-generated constructor stub
+}
 public String getFlightNumber() {
 	return flightNumber;
 }

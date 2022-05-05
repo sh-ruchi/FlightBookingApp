@@ -21,12 +21,11 @@ td{
 </head>
 <body>
 <br>
-<form action="searchAgain" method="get">
-	<input type="submit" value="Search Again">
-</form>
 <a href="/flightreservation">[Go To Home Page]</a>
 <a href="/flightreservation/showLogin"><button class="btn">Logout</button> </a>
+<a href="/flightreservation/showAddFlight"><button class="btn">Add More</button></a>
 <h2>Operating Flights:</h2>
+<form action="showFlights" method="get">
 <table>
 <tr>
 <th>Airlines</th>
@@ -41,9 +40,10 @@ td{
 <td>${flight.departureCity}</td>
 <td>${flight.arrivalCity}</td>
 <td>${flight.estimatedDepartureTime}</td>
-<td><a href="showCompleteReservation?flightId=${flight.id}">Book Now</a></td>
+<!-- td><a href="showCompleteReservation?flightId=${flight.id}">Book Now</a></td-->
 </tr>
 </c:forEach>
 </table>
+</form>
 </body>
 </html>

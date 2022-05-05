@@ -3,6 +3,7 @@
  */
 package com.ruchika.flightreservation.pojo;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 
@@ -14,9 +15,12 @@ import javax.persistence.OneToOne;
 @Entity
 public class Reservation extends GenericEntity {
 
-	
+	@Column(name="CHECKED_IN")
 	private Boolean checkedIn;
+	
+	@Column(name="NUMBER_OF_BAGS")
 	private int numberOfBags;
+	
 	
 	@OneToOne
 	private Passenger passenger;

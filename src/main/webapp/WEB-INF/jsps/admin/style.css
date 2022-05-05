@@ -1,0 +1,41 @@
+.f-class{
+	background-color: rgb(10, 120, 19);
+	drop-shadow(2px 3px 3px rgba(0, 0, 0, 0.4));
+    border-radius: 3%;
+    border-top-left-radius: 4%;
+    border-top-right-radius: 24%;
+    border-bottom-left-radius: 4%;
+    border-bottom-right-radius: 25%;
+    font-size: 2rem;
+    padding:3%
+    
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+th{
+	width:2%;
+}
+td{
+	width:2%;
+}
+.inp-btn, .submit-btn, .btn{
+	
+	height: 30px;
+    width: 20%;
+    font-size: 2rem;
+    font-size: 1.2rem;
+	text-align: center;
+	 margin-left: 13%;
+	
+}
+
+.submit-btn{
+	
+	height: 30px;
+    width: 15%;
+    margin-left: 13%;
+    margin-right: -10%;
+}
+

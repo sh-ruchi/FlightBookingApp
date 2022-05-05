@@ -17,6 +17,8 @@ import javax.persistence.MappedSuperclass;
 @MappedSuperclass  //tells that this class is not directly mapped to db table
 public class GenericEntity {
 
+	
+  //	GenerationType.IDENTITY TO Automatically  generate id 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;

@@ -1,0 +1,39 @@
+.f-class{
+	background-color: rgb(10, 120, 19);
+	drop-shadow(2px 3px 3px rgba(0, 0, 0, 0.4));
+    border-radius: 3%;
+    border-top-left-radius: 4%;
+    border-top-right-radius: 24%;
+    border-bottom-left-radius: 4%;
+    border-bottom-right-radius: 25%;
+    font-size: 1.5rem;
+    padding:3%
+    
+}
+.alink{
+	padding: 0%;
+    font-size: 2rem;
+    margin-left: 2%;
+    
+    border: 2%;
+    color: #191241;
+}
+.inp-btn, .submit-btn{
+	
+	height: 30px;
+    width: 20%;
+    font-size: 2rem;
+    font-size: 1.2rem;
+	text-align: center;
+	margin-left: 13%;
+	
+}
+
+.submit-btn{
+	
+	height: 30px;
+    width: 15%;
+    margin-left: 13%;
+    margin-right: -10%;
+}
+
